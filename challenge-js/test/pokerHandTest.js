@@ -12,7 +12,7 @@ describe('Rank a Royal Flush', function() {
 
 describe('Rank a Straight Flush', function() {
   it('Return straight flush when hand given', function() {
-    var hand = new PokerHand('3h, 4h, 5h, 6h, 7h');
+    var hand = new PokerHand('3h 4h 5h 6h 7h');
     assert.equal(hand.getRank(), 'Straight Flush');
   });
 });
@@ -20,7 +20,7 @@ describe('Rank a Straight Flush', function() {
 
 describe('Four of a Kind', function() {
   it('Return four of a kind when hand given', function() {
-    var hand = new PokerHand('As As As As 10s');
+    var hand = new PokerHand('Ad As As As 10s');
     assert.equal(hand.getRank(), 'Four of a Kind');
   });
 });
@@ -47,7 +47,7 @@ describe('Rank A Flush', function() {
 
 
 describe('Rank A Straight', function() {
-  var hand = new PokerHand('10h 9h 8h 7h 6h');
+  var hand = new PokerHand('10h 9d 8h 7h 6h');
 
   it('Return straight when hand given', function() {
     assert.equal(hand.getRank(), 'Straight');
